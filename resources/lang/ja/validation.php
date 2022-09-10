@@ -155,6 +155,10 @@ return [
       |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name'=> '名前',
+        'description'=>'説明',
+        'kcal' => 'カロリー'
+    ],
 
 ];

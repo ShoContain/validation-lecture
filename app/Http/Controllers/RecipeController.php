@@ -20,12 +20,14 @@ class RecipeController extends Controller
 
     public function store(Request $request)
     {
+        // Validationをする
         $request->validate([
             'name' => ['required'],
             'description' => ['required'],
-            'calories' => ['required', 'integer', 'min:0'],
+            'kcal' => ['required', 'integer', 'between:20,100']
         ]);
 
+        // 登録
         $recipe = new Recipe();
         $recipe->fill($request->all())->save();
 
