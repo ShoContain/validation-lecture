@@ -24,7 +24,7 @@ class RecipeController extends Controller
         $request->validate([
             'name' => ['required'],
             'description' => ['required'],
-            'kcal' => ['required', 'integer', 'between:20,100']
+            'calories' => ['required', 'integer', 'between:20,100']
         ]);
 
         // 登録
